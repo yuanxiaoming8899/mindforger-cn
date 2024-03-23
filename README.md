@@ -1,98 +1,84 @@
-# Thinking Notebook & Markdown Editor
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">思考笔记本和 Markdown 编辑器</font></font></h1><a id="user-content-thinking-notebook--markdown-editor" class="anchor" aria-label="永久链接：思考笔记本和 Markdown 编辑器" href="#thinking-notebook--markdown-editor"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://ci.appveyor.com/project/dvorka/mindforger" rel="nofollow"><img src="https://camo.githubusercontent.com/f4019d88887c08a4fc49b8e925e1645cac563c236ce2c15c0084d44301a20c03/68747470733a2f2f63692e6170707665796f722e636f6d2f6170692f70726f6a656374732f7374617475732f69656d6f70323830706f38346f6436363f7376673d74727565" alt="Win 的 Appveyor CI" data-canonical-src="https://ci.appveyor.com/api/projects/status/iemop280po84od66?svg=true" style="max-width: 100%;"></a>
+<a href="https://github.com/dvorka/mindforger/actions"><img src="https://github.com/dvorka/mindforger/actions/workflows/build_macos.yml/badge.svg" alt="适用于 macOS 的 GitHub Actions CI" style="max-width: 100%;"></a>
+<a href="https://github.com/dvorka/mindforger/actions"><img src="https://github.com/dvorka/mindforger/actions/workflows/build_ubuntu.yml/badge.svg" alt="适用于 Ubuntu 的 GitHub Actions CI" style="max-width: 100%;"></a>
+<a href="https://github.com/dvorka/mindforger/releases"><img src="https://camo.githubusercontent.com/284ccdf37d6d94d606113d541afd4730de66a5bdd0bb0c25e686986f847a5507/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652f64766f726b612f6d696e64666f726765722e737667" alt="当前版本" data-canonical-src="https://img.shields.io/github/release/dvorka/mindforger.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/dvorka/mindforger/issues"><img src="https://camo.githubusercontent.com/7de252530fb22177611f38a8e23315de371ed176179410613d55e32d5292c037/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f64766f726b612f6d696e64666f726765722e7376673f6d61784167653d333630" alt="GitHub 问题" data-canonical-src="https://img.shields.io/github/issues/dvorka/mindforger.svg?maxAge=360" style="max-width: 100%;"></a>
+<a href="https://github.com/dvorka/mindforger/releases"><img src="https://camo.githubusercontent.com/40e3dc57d63d3fba234149a0e1488b8a3acb7811213c4f01714394edfb3ba56f/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f64766f726b612f6d696e64666f726765722f746f74616c2e737667" alt="所有版本下载" data-canonical-src="https://img.shields.io/github/downloads/dvorka/mindforger/total.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/dvorka/mindforger/blob/master/LICENSE"><img src="https://camo.githubusercontent.com/ad3640147501b4cd072d9601c324c03b3a7395389556d4e8e49e21fb62cf25bc/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f64766f726b612f6d696e64666f726765723f636f6c6f723d253233666630303030" alt="执照" data-canonical-src="https://img.shields.io/github/license/dvorka/mindforger?color=%23ff0000" style="max-width: 100%;"></a>
+<a href="https://twitter.com/intent/follow?screen_name=mindforger" rel="nofollow"><img src="https://camo.githubusercontent.com/f5c47f60c0049526d2a460891d9ab309f426fe655d19d9cd1037693fe42c19c1/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f666f6c6c6f772f6d696e64666f726765722e7376673f7374796c653d736f6369616c266c6f676f3d74776974746572" alt="在推特上关注" data-canonical-src="https://img.shields.io/twitter/follow/mindforger.svg?style=social&amp;logo=twitter" style="max-width: 100%;"></a></p>
 
-[![Appveyor CI for Win](https://ci.appveyor.com/api/projects/status/iemop280po84od66?svg=true)](https://ci.appveyor.com/project/dvorka/mindforger)
-[![GitHub Actions CI for macOS](https://github.com/dvorka/mindforger/actions/workflows/build_macos.yml/badge.svg)](https://github.com/dvorka/mindforger/actions)
-[![GitHub Actions CI for Ubuntu](https://github.com/dvorka/mindforger/actions/workflows/build_ubuntu.yml/badge.svg)](https://github.com/dvorka/mindforger/actions)
-[![Current release](https://img.shields.io/github/release/dvorka/mindforger.svg)](https://github.com/dvorka/mindforger/releases)
-[![GitHub issues](https://img.shields.io/github/issues/dvorka/mindforger.svg?maxAge=360)](https://github.com/dvorka/mindforger/issues)
-[![All releases downloads](https://img.shields.io/github/downloads/dvorka/mindforger/total.svg)](https://github.com/dvorka/mindforger/releases)
-[![License](https://img.shields.io/github/license/dvorka/mindforger?color=%23ff0000)](https://github.com/dvorka/mindforger/blob/master/LICENSE)
-<a href="https://twitter.com/intent/follow?screen_name=mindforger"><img src="https://img.shields.io/twitter/follow/mindforger.svg?style=social&logo=twitter" alt="follow on Twitter"></a>
-<!-- [![Documentation](https://img.shields.io/badge/project-documentation-blue.svg)](https://github.com/dvorka/mindforger-repository/blob/master/memory/mindforger/index.md) -->
-
-Are you **drowning** in **information**, but **starving** for **knowledge**? Where do you keep your **private remarks**
-like ideas, personal plans, gift tips, how-tos, dreams, business vision, finance strategy, auto
-coaching notes? Loads of documents, sketches and remarks spread around the file system, cloud,
-web and Post-it notes? Are you afraid of your knowledge **privacy**? Are you able to **find** them once you create them?
-Do you know how are they mutually **related** when you read or write them? No?
-
-https://www.mindforger.com
-
-## Thinking Notebook
-![MindForger](http://www.mindforger.com/github/github-thinking-notebook.png)
-
-MindForger is human mind inspired personal knowledge management tool.
-
-## Markdown Editor
-![MindForger](http://www.mindforger.com/github/github-markdown-ide.png?)
-
-MindForger is open, free, well performing Markdown editor / IDE which respects your privacy.
-
-## Features
-MindForger **features overview**: [open](https://github.com/dvorka/mindforger?tab=GPL-2.0-1-ov-file#readme), [free](https://www.mindforger.com/#floss), [OpenAI GPT integrated](https://www.mindforger.com/#llm), knowledge manager, Markdown editor (math, diagrams, images, table of contents generator), [outliner](https://www.youtube.com/watch?v=LUqavHfKhnc&list=PLkTlgXXVRbUDdvysdslnAt_mU15oNPWNS&index=4), spell-check, [Markdown IDE](https://www.mindforger.com/#features) (multi-document workspace, section refactoring, cloning, scopes and stencils), [organizer](https://www.youtube.com/watch?v=Tje2mso7jNY&list=PLkTlgXXVRbUDdvysdslnAt_mU15oNPWNS&index=11) (Eisenhower matrix, Kanban), [knowledge graph navigator](https://www.youtube.com/watch?v=ZbQmZ1fKpxI&list=PLkTlgXXVRbUDdvysdslnAt_mU15oNPWNS&index=14), knowledge autolinking, think as you browse, think as you write, find by name/tag/text/regexp, find similar sections (associations), tagging, emojis, checklists, recent sections, [external section editor](https://www.youtube.com/watch?v=SLuvfDRyUrM&list=PLkTlgXXVRbUDdvysdslnAt_mU15oNPWNS&index=12), themes, internationalization, export (CSV with OHE for machine learning, HTML) and import (TWiki).
-
-## Installation
-Install:
-
-* [macOS](https://github.com/dvorka/mindforger/wiki/Installation#macos)
-* [Windows](https://github.com/dvorka/mindforger/wiki/Installation#windows)
-* [Ubuntu](https://github.com/dvorka/mindforger/wiki/Installation#ubuntu)
-* [Debian](https://github.com/dvorka/mindforger/wiki/Installation#debian)
-* [Fedora](https://github.com/dvorka/mindforger/wiki/Installation#fedora)
-* [FreeBSD](https://github.com/dvorka/mindforger/wiki/Installation#freebsd)
-* [Arch Linux](https://github.com/dvorka/mindforger/wiki/Installation#arch-linux)
-* [NixOS](https://github.com/dvorka/mindforger/wiki/Installation#nixos)
-* [openSUSE](https://github.com/dvorka/mindforger/wiki/Installation#opensuse)
-* [WSL](https://github.com/dvorka/mindforger/wiki/Installation#wsl)
-
-Build:
-
-* [build on macOS](https://github.com/dvorka/mindforger/wiki/Installation#build-on-macos)
-* [build on Windows](https://github.com/dvorka/mindforger/wiki/Installation#build-on-windows)
-* [build on Ubuntu](https://github.com/dvorka/mindforger/wiki/Installation#build-on-ubuntu)
-* [build on Debian](https://github.com/dvorka/mindforger/wiki/Installation#build-on-debian)
-* [build on Fedora](https://github.com/dvorka/mindforger/wiki/Installation#build-on-fedora)
-* [build on Gentoo](https://github.com/dvorka/mindforger/wiki/Installation#build-on-gentoo)
-* [build on NixOS](https://github.com/dvorka/mindforger/wiki/Installation#build-on-nixos)
-* [build on WSL](https://github.com/dvorka/mindforger/wiki/Installation#build-on-wsl)
-
-Docker:
-
-* [build and run container](https://github.com/dvorka/mindforger/wiki/Installation#build-and-run-in-container)
-
-Tarball:
-
-* [download tarball](https://github.com/dvorka/mindforger/releases)
-
-Nightly builds:
-
-* [macOS .dmg nightly](https://github.com/dvorka/mindforger/actions)
-* [Windows installer nightly](https://ci.appveyor.com/project/dvorka/mindforger/build/artifacts)
-* [tarball nightly](https://github.com/dvorka/mindforger/actions/workflows/build_ubuntu.yml)
-
-Check also [packages](https://pkgs.org/search/?q=mindforger) for Linux and Unix.
-
-## Documentation
-Read:
-
-* [Getting started](https://github.com/dvorka/mindforger/wiki/Getting-started)
-* [Installation](https://github.com/dvorka/mindforger/wiki/Installation)
-* [User documentation](https://github.com/dvorka/mindforger/wiki/User-documentation)
-* [Developer documentation](https://github.com/dvorka/mindforger/wiki/Developer-documentation)
-* [Project history](https://github.com/dvorka/mindforger/wiki/History)
-* [FAQs](https://github.com/dvorka/mindforger/wiki/FAQs)
-
-Watch:
-
-* [YouTube tutorials](https://www.youtube.com/playlist?list=PLkTlgXXVRbUDdvysdslnAt_mU15oNPWNS)
-
-Check:
-
-* `man mindforger`
-
-
-## In the News
-Read about MindForger on [FOSSMint](https://www.fossmint.com/mindforger-notebook-and-markdown-ide/), [Fedora Magazine](https://fedoramagazine.org/4-try-copr-december-2018/), [UbuntuPIT](https://www.ubuntupit.com/mindforger-a-privacy-focused-thinking-notebook-and-markdown-ide-for-linux/), [AppImageHub](https://www.appimagehub.com/p/1257573/), [AwesomeOpenSource](https://awesomeopensource.com/project/dvorka/mindforger), [root.cz](https://www.root.cz/clanky/softwarova-sklizen-19-9-2018/) [(2024)](https://www.root.cz/clanky/softwarova-sklizen-7-2-2024-vytvarejte-commitovaci-zpravy-s-umelou-inteligenci/) and [MOONGIFT.jp](https://www.moongift.jp/2018/12/mindforger-markdown%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8%E3%83%99%E3%83%BC%E3%82%B9/).
-
-## Bugs and Feature Requests
-https://github.com/dvorka/mindforger/issues
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您</font><strong><font style="vertical-align: inherit;">是否</font></strong><font style="vertical-align: inherit;">被</font><strong><font style="vertical-align: inherit;">信息</font></strong></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">淹没</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">却又</font><strong><font style="vertical-align: inherit;">渴望</font></strong><font style="vertical-align: inherit;">知识</font><font style="vertical-align: inherit;">？您在哪里保存您的</font><strong><font style="vertical-align: inherit;">私人言论，</font></strong><font style="vertical-align: inherit;">
+例如想法、个人计划、礼物提示、操作方法、梦想、商业愿景、财务策略、汽车教练笔记？大量文档、草图和评论遍布文件系统、云、网络和便利贴？您害怕您的知识</font><strong><font style="vertical-align: inherit;">隐私</font></strong><font style="vertical-align: inherit;">吗？</font><font style="vertical-align: inherit;">创建后</font><font style="vertical-align: inherit;">您能</font><strong><font style="vertical-align: inherit;">找到</font></strong><font style="vertical-align: inherit;">它们吗？当你读或写它们时，</font><font style="vertical-align: inherit;">你知道它们是如何相互</font><strong><font style="vertical-align: inherit;">关联的</font></strong><font style="vertical-align: inherit;">吗？不？</font></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><a href="https://www.mindforger.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://www.mindforger.com</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">思考笔记本</font></font></h2><a id="user-content-thinking-notebook" class="anchor" aria-label="永久链接：思考笔记本" href="#thinking-notebook"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/3f488022bc58aeae802f739ec8ab137ea15f5cce10b8f6a467015f88d793f42d/687474703a2f2f7777772e6d696e64666f726765722e636f6d2f6769746875622f6769746875622d7468696e6b696e672d6e6f7465626f6f6b2e706e67"><img src="https://camo.githubusercontent.com/3f488022bc58aeae802f739ec8ab137ea15f5cce10b8f6a467015f88d793f42d/687474703a2f2f7777772e6d696e64666f726765722e636f6d2f6769746875622f6769746875622d7468696e6b696e672d6e6f7465626f6f6b2e706e67" alt="心灵锻造者" data-canonical-src="http://www.mindforger.com/github/github-thinking-notebook.png" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MindForger 是受人类思维启发的个人知识管理工具。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">降价编辑器</font></font></h2><a id="user-content-markdown-editor" class="anchor" aria-label="永久链接：Markdown 编辑器" href="#markdown-editor"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/8f19e33656665eb6581e1f5276981ca85ee62007848f4af9a17b5b0a30b1c88c/687474703a2f2f7777772e6d696e64666f726765722e636f6d2f6769746875622f6769746875622d6d61726b646f776e2d6964652e706e673f"><img src="https://camo.githubusercontent.com/8f19e33656665eb6581e1f5276981ca85ee62007848f4af9a17b5b0a30b1c88c/687474703a2f2f7777772e6d696e64666f726765722e636f6d2f6769746875622f6769746875622d6d61726b646f776e2d6964652e706e673f" alt="心灵锻造者" data-canonical-src="http://www.mindforger.com/github/github-markdown-ide.png?" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MindForger 是开放、免费、性能良好的 Markdown 编辑器/IDE，尊重您的隐私。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">特征</font></font></h2><a id="user-content-features" class="anchor" aria-label="永久链接：特点" href="#features"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MindForger</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">功能概述</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><a href="https://github.com/dvorka/mindforger?tab=GPL-2.0-1-ov-file#readme"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开放</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.mindforger.com/#floss" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">免费</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.mindforger.com/#llm" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenAI GPT 集成</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、知识管理器、Markdown 编辑器（数学、图表、图像、目录生成器）、</font></font><a href="https://www.youtube.com/watch?v=LUqavHfKhnc&amp;list=PLkTlgXXVRbUDdvysdslnAt_mU15oNPWNS&amp;index=4" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">大纲</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、拼写检查、</font></font><a href="https://www.mindforger.com/#features" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Markdown IDE</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（多文档工作区、部分重构、克隆、范围）和模板）、</font></font><a href="https://www.youtube.com/watch?v=Tje2mso7jNY&amp;list=PLkTlgXXVRbUDdvysdslnAt_mU15oNPWNS&amp;index=11" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">组织者</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（艾森豪威尔矩阵、看板）、</font></font><a href="https://www.youtube.com/watch?v=ZbQmZ1fKpxI&amp;list=PLkTlgXXVRbUDdvysdslnAt_mU15oNPWNS&amp;index=14" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">知识图导航器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、知识自动链接、边浏览边思考、边写边思考、按名称/标签/文本/正则表达式查找、查找相似部分（关联）、标记、表情符号、清单、最近的部分、</font></font><a href="https://www.youtube.com/watch?v=SLuvfDRyUrM&amp;list=PLkTlgXXVRbUDdvysdslnAt_mU15oNPWNS&amp;index=12" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">外部部分编辑器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、主题、国际化、导出（带有用于机器学习的 OHE 的 CSV、HTML）和导入 (TWiki)。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></h2><a id="user-content-installation" class="anchor" aria-label="永久链接：安装" href="#installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装：</font></font></p>
+<ul dir="auto">
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#macos"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">苹果系统</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#windows"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">视窗</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#ubuntu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">乌班图</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#debian"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">德班</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#fedora"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">软呢帽</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#freebsd"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自由BSD</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#arch-linux"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">架构Linux</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#nixos"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">尼克斯操作系统</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#opensuse"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开放SUSE</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#wsl"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">世界SL</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建造：</font></font></p>
+<ul dir="auto">
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#build-on-macos"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 macOS 上构建</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#build-on-windows"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Windows 上构建</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#build-on-ubuntu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Ubuntu 上构建</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#build-on-debian"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Debian 上构建</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#build-on-fedora"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基于 Fedora 构建</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#build-on-gentoo"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基于 Gentoo 构建</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#build-on-nixos"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 NixOS 上构建</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#build-on-wsl"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基于 WSL 构建</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">码头工人：</font></font></p>
+<ul dir="auto">
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation#build-and-run-in-container"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建并运行容器</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">压缩包：</font></font></p>
+<ul dir="auto">
+<li><a href="https://github.com/dvorka/mindforger/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载压缩包</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">每晚构建：</font></font></p>
+<ul dir="auto">
+<li><a href="https://github.com/dvorka/mindforger/actions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">macOS .dmg 每晚</font></font></a></li>
+<li><a href="https://ci.appveyor.com/project/dvorka/mindforger/build/artifacts" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">每晚 Windows 安装程序</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/actions/workflows/build_ubuntu.yml"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">每晚压缩包</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">还要检查</font><font style="vertical-align: inherit;">Linux 和 Unix 的</font></font><a href="https://pkgs.org/search/?q=mindforger" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">软件包。</font></font></a><font style="vertical-align: inherit;"></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h2><a id="user-content-documentation" class="anchor" aria-label="永久链接：文档" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">读：</font></font></p>
+<ul dir="auto">
+<li><a href="https://github.com/dvorka/mindforger/wiki/Getting-started"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入门</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Installation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/User-documentation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户文档</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/Developer-documentation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发者文档</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/History"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目历史</font></font></a></li>
+<li><a href="https://github.com/dvorka/mindforger/wiki/FAQs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">常见问题解答</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">手表：</font></font></p>
+<ul dir="auto">
+<li><a href="https://www.youtube.com/playlist?list=PLkTlgXXVRbUDdvysdslnAt_mU15oNPWNS" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">YouTube 教程</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">查看：</font></font></p>
+<ul dir="auto">
+<li><code>man mindforger</code></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在新闻中</font></font></h2><a id="user-content-in-the-news" class="anchor" aria-label="永久链接：新闻中" href="#in-the-news"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://www.fossmint.com/mindforger-notebook-and-markdown-ide/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在FOSSMint</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://fedoramagazine.org/4-try-copr-december-2018/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fedora Magazine</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.ubuntupit.com/mindforger-a-privacy-focused-thinking-notebook-and-markdown-ide-for-linux/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">UbuntuPIT</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.appimagehub.com/p/1257573/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AppImageHub</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://awesomeopensource.com/project/dvorka/mindforger" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AwesomeOpenSource</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.root.cz/clanky/softwarova-sklizen-19-9-2018/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">root.cz </font></font></a> <a href="https://www.root.cz/clanky/softwarova-sklizen-7-2-2024-vytvarejte-commitovaci-zpravy-s-umelou-inteligenci/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(2024)</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="https://www.moongift.jp/2018/12/mindforger-markdown%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8%E3%83%99%E3%83%BC%E3%82%B9/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MOONGIFT.jp</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上阅读有关 MindForger 的信息</font><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">错误和功能请求</font></font></h2><a id="user-content-bugs-and-feature-requests" class="anchor" aria-label="永久链接：错误和功能请求" href="#bugs-and-feature-requests"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://github.com/dvorka/mindforger/issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://github.com/dvorka/mindforger/issues</font></font></a></p>
+</article></div>
